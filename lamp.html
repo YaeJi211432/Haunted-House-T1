@@ -1,0 +1,53 @@
+<html>
+<head>
+<title> lamp </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage lamp;
+
+
+void setup()
+{
+  
+  size( 400, 267 );
+  
+  frameRate( 30 );
+  
+   lamp = loadImage ("image/lamp.jpg");
+   
+
+}
+
+
+void draw()
+{
+  
+    image(lamp,0,0);
+	
+   textSize(20);
+   text("Back",320,250);
+   fill(255,255,255);
+   
+   if (mousePressed == true && mouseButton == LEFT)
+  { 
+      if (mouseY > 200 && mouseY < 300 &&
+          mouseX > 300 && mouseX < 350)
+      {
+          link("index.html")
+       }
+  }
+  
+ 
+  
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

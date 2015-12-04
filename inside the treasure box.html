@@ -1,0 +1,57 @@
+<html>
+<head>
+<title> lamp </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage treasurebox;
+
+
+void setup()
+{
+  
+  size( 400,270 );
+	background(255,255,255 );
+	frameRate( 30 );
+	
+	openedTreasureBox = loadImage("image/opened treasure box.jpg");
+   
+
+}
+
+
+void draw()
+{
+
+	image(openedTreasureBox,0,0);
+	text(mouseX,10,10);
+	text(mouseY,50,10);
+	
+	
+	
+		if (mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseY > 220 && mouseY < 240 &&
+			mouseX > 340 && mouseX < 380)
+		{
+			link("index.html");
+		}
+	}
+	
+	rect(340,220,30,10)
+	fill(255,255,255)
+	text("BACK",350,225)
+	fill(0,0,0)
+
+}
+
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

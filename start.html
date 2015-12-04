@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> start </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage number3;
+
+
+void setup()
+{
+  
+  size( 400, 270 );
+  
+  frameRate( 30 );
+  
+ number3 = loadImage("image/background2.jpg");
+  
+}
+
+
+void draw()
+{
+
+    image(number3,0,0);
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseY > 20 && mouseY < 200 &&
+			mouseX > 90 && mouseX < 300)
+		{
+			link("index.html");
+		}
+	}
+
+
+
+ 
+  
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

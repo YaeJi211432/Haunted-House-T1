@@ -1,0 +1,75 @@
+<html>
+<head>
+<title> Project </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage huntedHouse;
+
+
+void setup()
+{
+  
+  size( 400, 270 );
+  
+  frameRate( 30 );
+  
+  
+   huntedHouse = loadImage ("image/huntedHouse.jpg");
+  
+}
+
+
+void draw()
+{
+
+    image(huntedHouse,0,0);   
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{ 
+		if (mouseY > 55 && mouseY < 90 &&
+		  mouseX > 75 && mouseX < 140) 
+		{
+			link("lamp.html");
+		}
+	}
+	
+	
+      if (mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseY > 40 && mouseY < 90 &&
+			mouseX > 340 && mouseX < 370)
+		{
+			link("jar.html");
+		}
+     }
+     
+     if (mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseX > 175 && mouseX < 250 && mouseY > 125 && mouseY < 180) 
+		{
+			link("inside the treasure box.html");
+		}
+	}
+
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseX > 290 && mouseX < 330 && mouseY > 65 && mouseY < 100) 
+		{
+			link("third room.html");
+		}
+	}  
+  
+
+  
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
